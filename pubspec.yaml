@@ -1,0 +1,20 @@
+name: giff_dialog
+description: Giff Dialog Package
+version: 1.0.0
+homepage: https://github.com/warith313/giff_dialog
+
+environment:
+  sdk: '>=2.15.0 <3.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flare_flutter: ^3.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.4
+
+flutter:
