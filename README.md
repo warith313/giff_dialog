@@ -1,12 +1,13 @@
 # 👏 Giff Dialogs
+[![Pub package](https://img.shields.io/pub/v/giff_dialog.svg?style=flat-square)](https://pub.dartlang.org/packages/giff_dialog)
+[![support](https://img.shields.io/badge/platform-Flutter%7CAndroid%7CIOS%7CLinux%7CMacOS%7CWeb%7CWindows-ff69b4.svg?style=flat-square)](https://github.com/warith313/giff_dialog)
+
 <p>A beautiful and custom alert dialog for flutter highly inspired from <a href="https://github.com/Shashank02051997/FancyGifDialog-Android">FancyAlertDialog-Android</a>.</p>
 
 The source code is **100% Dart**, and everything resides in the [/lib](https://github.com/warith313/giff_dialog/tree/master/lib) folder.
 
 # 💻 Installation
 In the `dependencies:` section of your `pubspec.yaml`, add the following line:
-
-[![Version](https://img.shields.io/pub/v/giff_dialog.svg)](https://pub.dartlang.org/packages/giff_dialog)
 
 ```yaml
 dependencies:
