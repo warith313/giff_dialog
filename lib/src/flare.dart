@@ -42,7 +42,7 @@ class FlareGiffDialog extends StatelessWidget {
     this.cornerRadius = 8.0,
     this.buttonRadius = 8.0,
     this.entryAnimation = EntryAnimation.normal,
-  })  : super(key: key);
+  }) : super(key: key);
 
   /// Path to the Flare asset.
   final String flarePath;
@@ -91,7 +91,7 @@ class FlareGiffDialog extends StatelessWidget {
   /// Default is `Colors.grey`.
   final Color buttonCancelColor;
 
-  /// TODO: this props is not used at the moment.
+  /// this props is not used at the moment.
   final Color? cardBackgroundColor;
 
   /// Radius applied to the button corners.

@@ -1,6 +1,6 @@
 name: giff_dialog
-description: Giff Dialog Package
-version: 1.0.0
+description: Giff Dialog Package a beautiful and custom alert dialog for flutter
+version: 1.0.1
 homepage: https://github.com/warith313/giff_dialog
 
 environment:

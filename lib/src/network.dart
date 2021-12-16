@@ -32,7 +32,7 @@ class NetworkGiffDialog extends StatelessWidget {
     this.cornerRadius = 8.0,
     this.buttonRadius = 8.0,
     this.entryAnimation = EntryAnimation.normal,
-  })  : super(key: key);
+  }) : super(key: key);
 
   /// Image to display in dialog.
   ///

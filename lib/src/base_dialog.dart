@@ -68,8 +68,7 @@ class BaseGiffDialog extends StatefulWidget {
   _BaseGiffDialogState createState() => _BaseGiffDialogState();
 }
 
-class _BaseGiffDialogState extends State<BaseGiffDialog>
-    with TickerProviderStateMixin {
+class _BaseGiffDialogState extends State<BaseGiffDialog> with TickerProviderStateMixin {
   AnimationController? _animationController;
   late Animation<Offset> _entryAnimation;
 
@@ -96,8 +95,7 @@ class _BaseGiffDialogState extends State<BaseGiffDialog>
     }
   }
 
-  get _isDefaultEntryAnimation =>
-      widget.entryAnimation == EntryAnimation.normal;
+  get _isDefaultEntryAnimation => widget.entryAnimation == EntryAnimation.normal;
 
   @override
   void initState() {
@@ -107,8 +105,7 @@ class _BaseGiffDialogState extends State<BaseGiffDialog>
         vsync: this,
         duration: const Duration(milliseconds: 300),
       );
-      _entryAnimation =
-          Tween<Offset>(begin: _start, end: const Offset(0.0, 0.0)).animate(
+      _entryAnimation = Tween<Offset>(begin: _start, end: const Offset(0.0, 0.0)).animate(
         CurvedAnimation(
           parent: _animationController!,
           curve: Curves.easeIn,
@@ -130,9 +127,7 @@ class _BaseGiffDialogState extends State<BaseGiffDialog>
       children: <Widget>[
         Expanded(
           child: ClipRRect(
-            borderRadius: BorderRadius.only(
-                topRight: Radius.circular(widget.cornerRadius),
-                topLeft: Radius.circular(widget.cornerRadius)),
+            borderRadius: BorderRadius.only(topRight: Radius.circular(widget.cornerRadius), topLeft: Radius.circular(widget.cornerRadius)),
             child: imageWidget,
           ),
         ),
@@ -163,9 +158,7 @@ class _BaseGiffDialogState extends State<BaseGiffDialog>
       children: <Widget>[
         Expanded(
           child: ClipRRect(
-            borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(widget.cornerRadius),
-                bottomLeft: Radius.circular(widget.cornerRadius)),
+            borderRadius: BorderRadius.only(topLeft: Radius.circular(widget.cornerRadius), bottomLeft: Radius.circular(widget.cornerRadius)),
             child: imageWidget,
           ),
         ),
@@ -193,9 +186,7 @@ class _BaseGiffDialogState extends State<BaseGiffDialog>
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Row(
-        mainAxisAlignment: !widget.onlyOkButton
-            ? MainAxisAlignment.spaceEvenly
-            : MainAxisAlignment.center,
+        mainAxisAlignment: !widget.onlyOkButton ? MainAxisAlignment.spaceEvenly : MainAxisAlignment.center,
         children: <Widget>[
           if (!widget.onlyOkButton) ...[
             ElevatedButton(
@@ -206,8 +197,7 @@ class _BaseGiffDialogState extends State<BaseGiffDialog>
                   RoundedRectangleBorder(borderRadius: BorderRadius.circular(widget.buttonRadius)),
                 ),
               ),
-              onPressed: widget.onCancelButtonPressed ??
-                  () => Navigator.of(context).pop(),
+              onPressed: widget.onCancelButtonPressed ?? () => Navigator.of(context).pop(),
               child: widget.buttonCancelText ??
                   const Text(
                     'Cancel',
@@ -225,11 +215,7 @@ class _BaseGiffDialogState extends State<BaseGiffDialog>
                 ),
               ),
               onPressed: widget.onOkButtonPressed,
-              child: widget.buttonOkText ??
-                  const Text(
-                    'OK',
-                    style: TextStyle(color: Colors.white),
-                  ),
+              child: widget.buttonOkText ?? const Text('OK', style: TextStyle(color: Colors.white)),
             ),
           ],
         ],
@@ -240,8 +226,7 @@ class _BaseGiffDialogState extends State<BaseGiffDialog>
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
-    final isPortrait =
-        MediaQuery.of(context).orientation == Orientation.portrait;
+    final isPortrait = MediaQuery.of(context).orientation == Orientation.portrait;
     return Dialog(
       elevation: 0.0,
       backgroundColor: Colors.transparent,
@@ -257,12 +242,9 @@ class _BaseGiffDialogState extends State<BaseGiffDialog>
         width: MediaQuery.of(context).size.width * (isPortrait ? 0.8 : 0.6),
         child: Material(
           type: MaterialType.card,
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(widget.cornerRadius)),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(widget.cornerRadius)),
           elevation: Theme.of(context).dialogTheme.elevation ?? 24.0,
-          child: isPortrait
-              ? _buildPortraitWidget(context, widget.imageWidget)
-              : _buildLandscapeWidget(context, widget.imageWidget),
+          child: isPortrait ? _buildPortraitWidget(context, widget.imageWidget) : _buildLandscapeWidget(context, widget.imageWidget),
         ),
       ),
     );
